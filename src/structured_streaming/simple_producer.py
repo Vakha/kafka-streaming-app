@@ -11,4 +11,5 @@ producer = KafkaProducer(
 for e in range(100):
     data = {'number' : e}
     producer.send('output-topic', key=e, value=data)
+    print(f'Sent: {e} : {data}')
     sleep(1)
