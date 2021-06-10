@@ -23,14 +23,18 @@ dataSchema = T.StructType(
     [
         T.StructField("deviceId", T.IntegerType(), False),
         T.StructField("stage", T.StringType(), False),
-        T.StructField("timestamp", T.DateType(), False),
+        T.StructField("timestamp", T.TimestampType(), False),
     ]
 )
 
-json_messages = df.select(
-    F.from_json(F.decode(df.value, "UTF-8"), dataSchema).alias("json")
+messages = (
+    df.select(F.decode(df.value, "UTF-8").alias("jsonStr"))
+    .select(F.from_json(F.col("jsonStr"), dataSchema).alias("json"))
+    .select(
+        F.col("json.deviceId"), F.col("json.stage"), F.col("json.timestamp")
+    )
 )
 
-query = json_messages.writeStream.outputMode("append").format("console").start()
+query = messages.writeStream.outputMode("append").format("console").start()
 
 query.awaitTermination()
