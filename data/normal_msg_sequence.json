@@ -1,8 +1,8 @@
-{"deviceId":  1, "stage": "START_PICKING", "timestamp": "2021-06-10T10:00:51+02:00"}
-{"deviceId":  1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:01:51+02:00"}
-{"deviceId":  1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:02:51+02:00"}
-{"deviceId":  1, "stage": "STOP_PICKING", "timestamp": "2021-06-10T10:03:51+02:00"}
-{"deviceId":  1, "stage": "START_PICKING", "timestamp": "2021-06-10T10:04:51+02:00"}
-{"deviceId":  1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:05:51+02:00"}
-{"deviceId":  1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:06:51+02:00"}
-{"deviceId":  1, "stage": "STOP_PICKING", "timestamp": "2021-06-10T10:07:51+02:00"}
+{"deviceId": 1, "seqNum": 1, "stage": "START_PICKING", "timestamp": "2021-06-10T10:00:51+02:00"}
+{"deviceId": 1, "seqNum": 1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:01:51+02:00"}
+{"deviceId": 1, "seqNum": 1, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:02:51+02:00"}
+{"deviceId": 1, "seqNum": 1, "stage": "STOP_PICKING", "timestamp": "2021-06-10T10:03:51+02:00"}
+{"deviceId": 1, "seqNum": 2, "stage": "START_PICKING", "timestamp": "2021-06-10T10:04:51+02:00"}
+{"deviceId": 1, "seqNum": 2, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:06:51+02:00"}
+{"deviceId": 1, "seqNum": 2, "stage": "PICKED_APPLE", "timestamp": "2021-06-10T10:08:51+02:00"}
+{"deviceId": 1, "seqNum": 2, "stage": "STOP_PICKING", "timestamp": "2021-06-10T10:12:51+02:00"}

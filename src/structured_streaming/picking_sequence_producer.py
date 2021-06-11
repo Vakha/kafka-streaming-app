@@ -1,3 +1,4 @@
+from datetime import datetime
 from time import sleep
 import json
 from kafka import KafkaProducer
@@ -13,6 +14,7 @@ producer = KafkaProducer(
 with open(f"{DATA_DIR}/normal_msg_sequence.json", "r") as file:
     for line in file:
         msg = json.loads(line)
-        producer.send("output-topic-2", value=msg)
+        # msg["timestamp"] = datetime.now().astimezone().isoformat()
+        producer.send("output-topic-6", value=msg)
         print(f"Sent: {msg}")
-        sleep(2)
+        sleep(4)
